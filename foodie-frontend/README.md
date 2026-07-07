@@ -1,70 +1,577 @@
-# Getting Started with Create React App
+# 🍽️ Foodie Adda - Zomato Clone (MERN Stack)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![MERN Stack](https://img.shields.io/badge/MERN-Full%20Stack-green)
+![React](https://img.shields.io/badge/Frontend-React.js-blue)
+![Node](https://img.shields.io/badge/Backend-Node.js-green)
+![MongoDB](https://img.shields.io/badge/Database-MongoDB-brightgreen)
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+# 📌 Project Overview
 
-### `npm start`
+**Foodie Adda** is a full-stack food ordering and restaurant reservation web application inspired by Zomato.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+The application allows users to:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Explore restaurants
+- View food menus
+- Add food items to cart
+- Manage cart items
+- Place food orders
+- Book restaurant tables
+- View booking history
+- Cancel table bookings
+- Manage restaurant table availability
 
-### `npm test`
+The project is developed using the **MERN Stack**:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **MongoDB** - Database
+- **Express.js** - Backend API Framework
+- **React.js** - Frontend Library
+- **Node.js** - Backend Runtime Environment
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# 🚀 Features
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 👤 User Features
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Authentication
 
-### `npm run eject`
+- User Registration
+- User Login
+- Secure password encryption
+- JWT based authentication
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Restaurant Features
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Browse restaurants
+- View restaurant details
+- Display restaurant ratings
+- View available tables
+- View booked tables count
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Food Ordering
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- Browse food menu
+- Add food items to cart
+- Remove items from cart
+- Manage cart quantity
+- Place orders
 
-## Learn More
+### Table Reservation
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- Book restaurant tables
+- Select booking time
+- View booking history
+- Cancel bookings
+- Automatically update available tables after cancellation
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Other Features
 
-### Code Splitting
+- Restaurant reviews section
+- Responsive UI design
+- Protected routes
+- Persistent cart using Local Storage
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+---
 
-### Analyzing the Bundle Size
+# 🛠️ Technologies Used
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Frontend Technologies
 
-### Making a Progressive Web App
+| Technology | Purpose |
+|------------|---------|
+| React.js | Building interactive user interface |
+| React Router | Client-side navigation |
+| Bootstrap | Responsive UI design |
+| CSS | Custom styling |
+| Local Storage | Store cart and user session data |
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+---
 
-### Advanced Configuration
+## Backend Technologies
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+| Technology | Purpose |
+|------------|---------|
+| Node.js | Server-side JavaScript runtime |
+| Express.js | Creating REST APIs |
+| MongoDB | Database management |
+| Mongoose | MongoDB object modeling |
+| JWT | User authentication |
+| bcrypt | Password encryption |
+| dotenv | Environment variable management |
+| CORS | Communication between frontend and backend |
 
-### Deployment
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+# 📂 Project Structure
 
-### `npm run build` fails to minify
+```
+Zomato
+│
+├── foodie-frontend
+│   │
+│   ├── public
+│   │
+│   ├── src
+│   │   │
+│   │   ├── components
+│   │   │   ├── Navbar.js
+│   │   │   ├── RestaurantList.js
+│   │   │   ├── Cart.js
+│   │   │   ├── MyBookings.js
+│   │   │   ├── Login.js
+│   │   │   └── Signup.js
+│   │   │
+│   │   ├── App.js
+│   │   └── styles.css
+│   │
+│   └── package.json
+│
+│
+├── foodie-backend
+│   │
+│   ├── models
+│   │
+│   ├── routes
+│   │
+│   ├── server.js
+│   │
+│   ├── package.json
+│   │
+│   └── .env
+│
+└── README.md
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
+
+# ⚙️ How To Run The Project
+
+## Step 1: Clone Repository
+
+Clone the project from GitHub:
+
+```bash
+git clone https://github.com/Komal-Balsane/zomato_clone.git
+```
+
+Navigate into project folder:
+
+```bash
+cd Zomato
+```
+
+---
+
+# 🔥 Backend Setup
+
+## Step 2: Navigate To Backend Folder
+
+```bash
+cd foodie-backend
+```
+
+Install backend dependencies:
+
+```bash
+npm install
+```
+
+---
+
+## Step 3: Configure Environment Variables
+
+Create a file named:
+
+```
+.env
+```
+
+inside the `foodie-backend` folder.
+
+Add:
+
+```env
+PORT=5000
+
+MONGO_URI=your_mongodb_connection_string
+
+JWT_SECRET=your_secret_key
+```
+
+Example:
+
+```env
+PORT=5000
+
+MONGO_URI=mongodb+srv://username:password@cluster.mongodb.net/foodie
+
+JWT_SECRET=mysecretkey
+```
+
+---
+
+## Step 4: Start Backend Server
+
+Run:
+
+```bash
+npm start
+```
+
+or:
+
+```bash
+node server.js
+```
+
+Successful output:
+
+```
+Server running on port 5000
+
+MongoDB Connected Successfully
+```
+
+---
+
+# ⚛️ Frontend Setup
+
+## Step 5: Open New Terminal
+
+Navigate to frontend:
+
+```bash
+cd foodie-frontend
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+---
+
+## Step 6: Start React Application
+
+Run:
+
+```bash
+npm start
+```
+
+Application will open:
+
+```
+http://localhost:3000
+```
+
+---
+
+# 🔄 Application Workflow
+
+## Authentication Workflow
+
+```
+User Signup
+      |
+      |
+Password encrypted using bcrypt
+      |
+      |
+Stored in MongoDB
+      |
+      |
+User Login
+      |
+      |
+JWT Token Generated
+      |
+      |
+Access Application
+```
+
+---
+
+# 🍔 Food Ordering Workflow
+
+```
+Select Restaurant
+
+        |
+
+View Food Menu
+
+        |
+
+Add Food Items To Cart
+
+        |
+
+Manage Cart
+
+        |
+
+Place Order
+```
+
+---
+
+# 🪑 Table Booking Workflow
+
+```
+Select Restaurant
+
+        |
+
+Choose Booking Time
+
+        |
+
+Available Table Count Decreases
+
+        |
+
+Booking Added To My Bookings
+
+```
+
+---
+
+# ❌ Booking Cancellation Workflow
+
+```
+Cancel Booking
+
+        |
+
+Booking Removed
+
+        |
+
+Available Tables Increased
+
+        |
+
+Restaurant Status Updated
+```
+
+---
+
+# 🧩 Challenges Faced And Solutions
+
+---
+
+## 1. Restaurant Table Availability Management
+
+### Problem:
+
+Initially restaurant data was managed inside the `RestaurantList.js` component.
+
+Because of local state management, when a user cancelled a booking, available tables could not be updated.
+
+### Solution:
+
+Moved restaurant state management to `App.js`.
+
+Implemented:
+
+- React State Management
+- Props Passing
+- Callback Functions
+
+Flow:
+
+```
+App.js
+
+   |
+
+Restaurant Data
+
+   |
+
+RestaurantList Component
+
+   |
+
+Booking Update
+```
+
+---
+
+# 2. Maintaining Cart Data After Refresh
+
+### Problem:
+
+Cart items disappeared after refreshing the browser.
+
+### Solution:
+
+Implemented browser Local Storage.
+
+Saving data:
+
+```javascript
+localStorage.setItem()
+```
+
+Retrieving data:
+
+```javascript
+localStorage.getItem()
+```
+
+This keeps cart data available after page reload.
+
+---
+
+# 3. Secure User Authentication
+
+### Problem:
+
+Users required secure login and registration.
+
+### Solution:
+
+Implemented:
+
+- bcrypt password hashing
+- JWT authentication
+- Protected routes
+
+Authentication flow:
+
+```
+User Login
+
+      |
+
+Password Verification
+
+      |
+
+JWT Token Created
+
+      |
+
+Access Protected Pages
+```
+
+---
+
+# 4. Frontend And Backend Communication
+
+### Problem:
+
+React application cannot directly communicate with database.
+
+### Solution:
+
+Created REST APIs using Express.js.
+
+Communication flow:
+
+```
+React Frontend
+
+        |
+
+        API Request
+
+        |
+
+Express Backend
+
+        |
+
+MongoDB Database
+```
+
+---
+
+# 5. GitHub Upload Issues
+
+### Problem:
+
+`node_modules` files were getting tracked by Git.
+
+This increased repository size and created unnecessary changes.
+
+### Solution:
+
+Added `.gitignore`:
+
+```
+node_modules/
+.env
+build/
+dist/
+```
+
+Removed unnecessary files from Git tracking before pushing.
+
+---
+
+# 6. Nested Git Repository Problem
+
+### Problem:
+
+Frontend folder contained another `.git` repository.
+
+This caused problems while pushing the complete project.
+
+### Solution:
+
+Removed the nested Git repository:
+
+```
+foodie-frontend/.git
+```
+
+Maintained only one Git repository:
+
+```
+Zomato/.git
+```
+
+---
+
+# 📈 Future Enhancements
+
+Future improvements planned:
+
+- Online payment integration using Razorpay/Stripe
+- Real-time order tracking
+- Restaurant owner dashboard
+- Advanced food search and filtering
+- Google Maps restaurant location
+- AI based food recommendation system
+- Email/SMS booking confirmation
+- Admin dashboard
+
+---
+
+# 👩‍💻 Author
+
+**Komal Bhagwan Balsane**
+
+BE Information Technology Student
+
+---
+
+# ⭐ Conclusion
+
+Foodie Adda demonstrates the development of a complete MERN stack application with:
+
+- User authentication
+- REST API development
+- Database integration
+- Food ordering system
+- Cart management
+- Restaurant table reservation
+
+The project provides practical experience in frontend development, backend development, database management, authentication, and real-world application design.
